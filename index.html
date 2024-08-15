@@ -27,31 +27,61 @@
             top: 0;
             left: 0;
         }
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 10px 0;
+            transition: all 0.3s ease;
+        }
+        .sticky-nav a {
+            color: white;
+            transition: color 0.3s;
+        }
+        .sticky-nav a:hover {
+            color: #00c4ff;
+        }
+        .section {
+            min-height: 100vh;
+        }
     </style>
 </head>
 
 <body class="bg-gray-900 text-white">
 
+    <!-- Navigation Bar -->
+    <nav class="sticky-nav text-center p-4 bg-transparent">
+        <a href="#about" class="px-4">About</a>
+        <a href="#skills" class="px-4">Skills</a>
+        <a href="#experience" class="px-4">Experience</a>
+        <a href="#projects" class="px-4">Projects</a>
+        <a href="#education" class="px-4">Education</a>
+        <a href="#contact" class="px-4">Contact</a>
+    </nav>
+
     <!-- Hero Section -->
-    <header class="relative flex items-center justify-center h-screen">
+    <header class="relative flex items-center justify-center h-screen section">
         <div id="particles-js"></div>
         <div class="text-center animate__animated animate__fadeIn">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Dynamic and Innovative Software Engineer</h1>
-            <p class="text-lg md:text-2xl mb-8">Passionate about solving complex problems through technology.</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">SAMVRANT SAMAL</h1>
+            <p class="text-lg md:text-2xl mb-8">Dynamic and Innovative Software Engineer.</p>
             <a href="#projects" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View My Work</a>
         </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-16 px-8 md:px-32 bg-gray-800">
-        <h2 class="text-3xl font-bold mb-4">About Me</h2>
-        <p class="text-lg leading-relaxed">I am a Computer Science graduate with a strong passion for solving complex problems and driving innovation through technology. I am skilled at collaborating with multidisciplinary teams to deliver high-quality solutions that meet both technical and business requirements. I believe in continuous learning and evolving to stay compatible with the real world.</p>
+    <section id="about" class="py-16 px-8 md:px-32 bg-gray-800 section">
+        <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeInLeft">About Me</h2>
+        <p class="text-lg leading-relaxed animate__animated animate__fadeInRight">I am a Computer Science graduate with a strong passion for solving complex problems and driving innovation through technology. I am skilled at collaborating with multidisciplinary teams to deliver high-quality solutions that meet both technical and business requirements. I believe in continuous learning and evolving to stay compatible with the real world.</p>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-16 px-8 md:px-32 bg-gray-700">
-        <h2 class="text-3xl font-bold mb-4">Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <section id="skills" class="py-16 px-8 md:px-32 bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 section">
+        <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeInLeft">Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 animate__animated animate__fadeInRight">
             <div>
                 <h3 class="text-xl font-semibold mb-2">Languages</h3>
                 <ul class="list-disc list-inside">
@@ -89,9 +119,9 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-16 px-8 md:px-32 bg-gray-800">
-        <h2 class="text-3xl font-bold mb-4">Work Experience</h2>
-        <div>
+    <section id="experience" class="py-16 px-8 md:px-32 bg-gray-800 section">
+        <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeInLeft">Work Experience</h2>
+        <div class="animate__animated animate__fadeInRight">
             <h3 class="text-2xl font-semibold">AWS Cloud Practitioner</h3>
             <p class="text-gray-400">NSIC - Hyderabad, India | July 2023 - August 2024</p>
             <ul class="list-disc list-inside">
@@ -103,14 +133,14 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16 px-8 md:px-32 bg-gray-700">
-        <h2 class="text-3xl font-bold mb-4">Projects</h2>
-        <div class="space-y-8">
+    <section id="projects" class="py-16 px-8 md:px-32 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 section">
+        <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeInLeft">Projects</h2>
+        <div class="space-y-8 animate__animated animate__fadeInRight">
             <div>
                 <h3 class="text-2xl font-semibold">House Price Prediction</h3>
                 <p class="text-gray-400">January 2023 - February 2024</p>
                 <p>Developed an ML algorithm that predicts house prices based on given features and labels using the Random Forest Regression algorithm.</p>
-                <a href="https://github.com/krrish1147/House-price-prediction-using-ML" class="text-blue-400">View on GitHub</a>
+                <a href="https://github.com/krrish1147/House-price-prediction-using-ML" class="text-blue-400 hover:text-blue-500">View on GitHub</a>
             </div>
             <div>
                 <h3 class="text-2xl font-semibold">Journal App</h3>
@@ -121,15 +151,15 @@
                 <h3 class="text-2xl font-semibold">Riddle Game - Batman V/s Riddler</h3>
                 <p class="text-gray-400">March 2023</p>
                 <p>Developed a dynamic riddle game in Python, enhancing interactivity with hints and challenging riddles.</p>
-                <a href="https://github.com/krrish1147/Batman-Vs-Riddler" class="text-blue-400">View on GitHub</a>
+                <a href="https://github.com/krrish1147/Batman-Vs-Riddler" class="text-blue-400 hover:text-blue-500">View on GitHub</a>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-16 px-8 md:px-32 bg-gray-800">
-        <h2 class="text-3xl font-bold mb-4">Education</h2>
-        <div>
+    <section id="education" class="py-16 px-8 md:px-32 bg-gray-800 section">
+        <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeInLeft">Education</h2>
+        <div class="animate__animated animate__fadeInRight">
             <h3 class="text-2xl font-semibold">Bachelor of Technology (B.Tech)</h3>
             <p class="text-gray-400">Institute of Aeronautical Engineering, Hyderabad | 2025</p>
         </div>
@@ -144,12 +174,12 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 px-8 md:px-32 bg-gray-700">
-        <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-        <p class="mb-4">Feel free to reach out via email or connect with me on LinkedIn or GitHub.</p>
-        <p>Email: <a href="mailto:samvrantsamal11@gmail.com" class="text-blue-400">samvrantsamal11@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/samvrant-samal-107029235" class="text-blue-400">linkedin.com/in/samvrant-samal-107029235</a></p>
-        <p>GitHub: <a href="https://github.com/krrish1147" class="text-blue-400">github.com/krrish1147</a></p>
+    <section id="contact" class="py-16 px-8 md:px-32 bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 section">
+        <h2 class="text-3xl font-bold mb-4 animate__animated animate__fadeInLeft">Contact Me</h2>
+        <p class="mb-4 animate__animated animate__fadeInRight">Feel free to reach out via email or connect with me on LinkedIn or GitHub.</p>
+        <p>Email: <a href="mailto:samvrantsamal11@gmail.com" class="text-blue-400 hover:text-blue-500">samvrantsamal11@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/samvrant-samal-107029235" class="text-blue-400 hover:text-blue-500">linkedin.com/in/samvrant-samal-107029235</a></p>
+        <p>GitHub: <a href="https://github.com/krrish1147" class="text-blue-400 hover:text-blue-500">github.com/krrish1147</a></p>
     </section>
 
     <!-- Footer -->
@@ -220,6 +250,18 @@
                 }
             },
             "retina_detect": true
+        });
+    </script>
+
+    <!-- Sticky Navbar Script -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.sticky-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-black');
+            } else {
+                nav.classList.remove('bg-black');
+            }
         });
     </script>
 
